@@ -57,6 +57,7 @@ const ListaCategoryComponet = () => {
     };
     document.addEventListener("scroll", onScroll);
 
+    
     return () => document.removeEventListener("scroll", onScroll);
   }, [showFixed]);
 
