@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Logo } from "./components/Logo";
 import { GlobalStyle } from "./styles/GlobalStyles";
 import { DataProvider } from "./GlobalContext";
@@ -8,8 +8,10 @@ import { Pages } from "./pages/Pages";
 
 import { createBrowserHistory } from 'history';
 import ReactGA from 'react-ga';
-
+  
 const history = createBrowserHistory()
+
+console.log('history', history)
 
 ReactGA.initialize('UA-000000-01')
 ReactGA.pageview(window.location.pathname + window.location.search)
@@ -18,6 +20,7 @@ history.listen(function(location){
   ReactGA.pageview(window.location.pathname + window.location.search)
 })
 
+console.log('history2', history)
 
 export const App = () => { 
 
@@ -28,7 +31,7 @@ export const App = () => {
       <Router history={history}>
           <Logo />
           <Pages />
-          <Navbar />
+          <Navbar/>
       </Router>
     </Suspense>
     </DataProvider>

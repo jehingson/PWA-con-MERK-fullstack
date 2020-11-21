@@ -10,7 +10,7 @@ export const Logo = props => {
         margin-left: -15px;
     `
   return (
-    <Link to='/'>
+    <Link to='/' >
     <Svg
       width={336.774}
       height={80.225}
