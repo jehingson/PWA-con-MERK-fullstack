@@ -1,6 +1,7 @@
 import React from "react"
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
+import { Link as LinkBrouser } from "react-router-dom";
+import Offline from '../Offline';
 
 export const Logo = props => {
 
@@ -8,6 +9,12 @@ export const Logo = props => {
         width: 220px;
         margin-top: -10px;
         margin-left: -15px;
+    `
+
+    const Link = styled(LinkBrouser)`
+      display: flex;
+      align-items: center;
+      justify-content: start;
     `
   return (
     <Link to='/' >
@@ -64,6 +71,7 @@ export const Logo = props => {
       </g>
       <style />
     </Svg>
+    <Offline>Sin conexion...</Offline>
     </Link>
   )
 }

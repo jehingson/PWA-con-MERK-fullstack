@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense } from "react";
 import { Logo } from "./components/Logo";
 import { GlobalStyle } from "./styles/GlobalStyles";
 import { DataProvider } from "./GlobalContext";
@@ -19,8 +19,6 @@ ReactGA.pageview(window.location.pathname + window.location.search)
 history.listen(function(location){
   ReactGA.pageview(window.location.pathname + window.location.search)
 })
-
-console.log('history2', history)
 
 export const App = () => { 
 
